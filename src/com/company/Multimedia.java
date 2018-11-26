@@ -1,12 +1,17 @@
 package com.company;
 
+
+import java.util.Objects;
+
 public class Multimedia {
+    public enum formato {wav,mp3,midi,avi,mov,mpg,cdAudio,dvd}
+
     protected String tittle;
     protected String author;
-    protected String format;
+    protected formato format;
     protected int duration;
 
-    public Multimedia(String tittle, String author, String format, int duration) {
+    public Multimedia(String tittle, String author, formato format, int duration) {
         this.tittle = tittle;
         this.author = author;
         this.format = format;
@@ -29,11 +34,11 @@ public class Multimedia {
         this.author = author;
     }
 
-    public String getFormat() {
+    public formato getFormat() {
         return format;
     }
 
-    public void setFormat(String format) {
+    public void setFormat(formato  format) {
         this.format = format;
     }
 
@@ -55,9 +60,13 @@ public class Multimedia {
                 '}';
     }
 
-    public boolean tittleAndAuthor (String tittle, String author) {
-        boolean igual = false;
-        if (author == tittle) igual = true;
-        return igual;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Multimedia that = (Multimedia) o;
+        return Objects.equals(tittle, that.tittle) &&
+                Objects.equals(author, that.author);
     }
-}
+
+    }

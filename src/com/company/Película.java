@@ -4,11 +4,23 @@ public class Película extends Multimedia {
     protected String actor;
     protected String actress;
 
-    public Película(String tittle, String author, String format, int duration, String actor, String actress) {
+    public Película(String tittle, String author, formato format, int duration, String actor) {
+        super(tittle, author, format, duration);
+        this.actor = actor;
+    }
+
+    public Película(String actress, String tittle, String author, formato format, int duration) {
+        super(tittle, author, format, duration);
+        this.actor = actress;
+    }
+
+    public Película(String tittle, String author, formato format, int duration, String actor, String actress) {
         super(tittle, author, format, duration);
         this.actor = actor;
         this.actress = actress;
     }
+
+
 
     public String getActor() {
         return actor;
@@ -28,14 +40,25 @@ public class Película extends Multimedia {
 
     @Override
     public String toString() {
-        return "Película{" +
+
+        String result = "Película{" +
                 "actor='" + actor + '\'' +
                 ", actress='" + actress + '\'' +
                 ", tittle='" + tittle + '\'' +
                 ", author='" + author + '\'' +
                 ", format='" + format + '\'' +
-                ", duration=" + duration +
-                '}';
+                ", duration=" + duration
+                ;
+
+        if (this.actor != null) {
+            result += "actor='" + actor + '\'';
+        }
+
+        if (this.actress != null) {
+            result += "actrees='" + actress + '\'';
+        }
+
+        return result;
     }
 
 
