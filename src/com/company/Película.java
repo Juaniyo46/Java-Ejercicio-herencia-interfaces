@@ -4,23 +4,11 @@ public class Película extends Multimedia {
     protected String actor;
     protected String actress;
 
-    public Película(String tittle, String author, formato format, int duration, String actor) {
-        super(tittle, author, format, duration);
-        this.actor = actor;
-    }
-
-    public Película(String actress, String tittle, String author, formato format, int duration) {
-        super(tittle, author, format, duration);
-        this.actor = actress;
-    }
-
     public Película(String tittle, String author, formato format, int duration, String actor, String actress) {
         super(tittle, author, format, duration);
         this.actor = actor;
         this.actress = actress;
     }
-
-
 
     public String getActor() {
         return actor;
