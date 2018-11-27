@@ -7,18 +7,16 @@ public class Main {
     public static void main(String[] args) {
 
         ListaMultimedia objetc1 = new ListaMultimedia(10);
-        ListaMultimedia lista2 = new ListaMultimedia(10);
-        ListaMultimedia lista3 = new ListaMultimedia(10);
 
         Película pelicula1 = new Película("Las siete maravillas", "Pedro Jimenez", Multimedia.formato.avi, 150, "Jonny Depp", "Jenifer Lopez");
         Película pelicula2 = new Película("Los Vengadores", "Joseph Hill", Multimedia.formato.dvd,150, "Donal Junior", "Scarlett Johansson");
         Película pelicula3 = new Película("Casi 300", "Gonzalo Lopez", Multimedia.formato.mpg, 120, "Rodrigo Liebana", "Josefa Hernandez");
 
         objetc1.add(pelicula1);
-        lista2.add(pelicula2);
-        lista3.add(pelicula3);
+        objetc1.add(pelicula2);
+        objetc1.add(pelicula3);
 
-        System.out.println(objetc1 + "\n" + lista2 + "\n" + lista3);
+        System.out.println(objetc1);
 
         ListaMultimedia objetc2 = new ListaMultimedia(20);
 
@@ -26,11 +24,11 @@ public class Main {
         Disco disco2 = new Disco("Un alumno más", "Melendi", Multimedia.formato.mp3, 70, "pop");
         Disco disco3 = new Disco("Mi Princesa", "David Bisbal", Multimedia.formato.mp3, 80, "pop");
 
-        lista3.add(disco1);
-        lista3.add(disco2);
-        lista3.add(disco3);
+        objetc2.add(disco1);
+        objetc2.add(disco2);
+        objetc2.add(disco3);
 
-        System.out.println(lista3);
+        System.out.println(objetc2);
 
 
     }

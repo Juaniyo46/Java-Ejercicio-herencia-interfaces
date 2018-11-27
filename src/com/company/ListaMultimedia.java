@@ -17,9 +17,10 @@ public class ListaMultimedia {
 
     public boolean add (Multimedia multimedia) {
         for (int i = 0 ; i < this.lista.length ; i++) {
-            if (this.lista[i] == null) this.lista[i] = multimedia;
+            if (this.lista[i] == null) {this.lista[i] = multimedia;
             counter = i + 1;
             return true;
+            }
         }
         return false;
     }
