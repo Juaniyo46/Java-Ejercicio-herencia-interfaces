@@ -4,6 +4,20 @@ import com.sun.javaws.progress.PreloaderPostEventListener;
 
 public class Main {
 
+    public static void rellenar (Pila pila) {
+        for (int i = 0; i < 11; i++) {
+            pila.añadir(i);
+        }
+    }
+
+    public static void imprimirYVaciar (Pila pila) {
+        for (Object o: pila.getArray1()) {
+            System.out.println(pila.getArray1()[0]);
+            pila.extraer();
+
+        }
+    }
+
     public static void main(String[] args) {
 
         ListaMultimedia objetc1 = new ListaMultimedia(10);
@@ -29,6 +43,16 @@ public class Main {
         objetc2.add(disco3);
 
         System.out.println(objetc2);
+
+
+
+        Pila pilaTest = new Pila(new Object[10],0);
+        rellenar(pilaTest);
+        imprimirYVaciar(pilaTest);
+
+
+
+
 
 
     }
