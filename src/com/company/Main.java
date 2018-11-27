@@ -10,7 +10,7 @@ public class Main {
 
         Película pelicula1 = new Película("Las siete maravillas", "Pedro Jimenez", Multimedia.formato.avi, 150, "Jonny Depp", "Jenifer Lopez");
         Película pelicula2 = new Película("Los Vengadores", "Joseph Hill", Multimedia.formato.dvd,150, "Donal Junior", "Scarlett Johansson");
-        Película pelicula3 = new Película("Casi 300", "Gonzalo Lopez", Multimedia.formato.mpg, 120, "Rodrigo Liebana", "Josefa Hernandez");
+        Película pelicula3 = new Película("Josefa Hernandez","Casi 300", "Gonzalo Lopez", Multimedia.formato.mpg, 120);
 
         objetc1.add(pelicula1);
         objetc1.add(pelicula2);
